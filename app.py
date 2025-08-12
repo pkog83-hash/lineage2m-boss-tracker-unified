@@ -28,6 +28,7 @@ GROUPS = {
     "艾瑞卡4": {"icon": "🗡️", "color": "#f39c12", "file_prefix": "erika4"},
     "艾瑞卡5": {"icon": "🔮", "color": "#9b59b6", "file_prefix": "erika5"},
     "艾瑞卡6": {"icon": "⚡", "color": "#e67e22", "file_prefix": "erika6"},
+    "黎歐納5": {"icon": "🌟", "color": "#16a085", "file_prefix": "leonard5"},
     "猛龍一盟": {"icon": "🐉", "color": "#c0392b", "file_prefix": "dragon1"},
     "猛龍二盟": {"icon": "🔥", "color": "#8e44ad", "file_prefix": "dragon2"},
 }
@@ -520,22 +521,45 @@ def show_boss_tracker(group_name, group_config):
         if st.button("🧪 測試通知功能", help="發送一個測試通知確認功能正常"):
             test_notification_js = """
             <script>
-            function testNotification() {
-                console.log('測試通知按鈕被點擊');
-                console.log('當前通知權限:', notificationPermission);
-                if (notificationPermission === 'granted') {
-                    console.log('發送測試通知');
-                    sendNotification(
-                        '🧪 測試通知',
-                        '如果您看到這個通知，表示功能正常運作！',
-                        '✅'
-                    );
-                } else {
-                    console.log('通知權限未授予');
-                    alert('請先啟用桌面通知權限！當前權限狀態: ' + notificationPermission);
+            (function() {
+                console.log('=== 測試通知功能 ===');
+                console.log('瀏覽器支援通知:', 'Notification' in window);
+                
+                if (!('Notification' in window)) {
+                    alert('您的瀏覽器不支援桌面通知功能！');
+                    return;
                 }
-            }
-            testNotification();
+                
+                const currentPermission = Notification.permission;
+                console.log('當前通知權限:', currentPermission);
+                
+                if (currentPermission === 'granted') {
+                    console.log('發送測試通知');
+                    try {
+                        const notification = new Notification('🧪 測試通知', {
+                            body: '如果您看到這個通知，表示功能正常運作！',
+                            icon: 'data:image/svg+xml;base64,' + btoa('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">✅</text></svg>'),
+                            requireInteraction: true,
+                            tag: 'test-notification'
+                        });
+                        
+                        notification.onclick = function() {
+                            window.focus();
+                            notification.close();
+                        };
+                        
+                        setTimeout(() => notification.close(), 5000);
+                        console.log('測試通知已發送');
+                    } catch (error) {
+                        console.error('發送通知時發生錯誤:', error);
+                        alert('發送通知失敗: ' + error.message);
+                    }
+                } else if (currentPermission === 'denied') {
+                    alert('桌面通知權限已被拒絕！\\n請到瀏覽器設定中允許通知，或點擊網址列左側的通知圖示。');
+                } else {
+                    alert('請先點擊「🔔 啟用桌面通知」按鈕來授予權限！');
+                }
+            })();
             </script>
             """
             st.markdown(test_notification_js, unsafe_allow_html=True)
@@ -544,18 +568,37 @@ def show_boss_tracker(group_name, group_config):
         if st.button("🔍 檢查Debug日誌", help="在瀏覽器控制台查看詳細日誌"):
             debug_js = """
             <script>
-            function debugNotifications() {
+            (function() {
                 console.log('=== 通知功能診斷 ===');
                 console.log('瀏覽器支援通知:', 'Notification' in window);
-                console.log('當前權限狀態:', notificationPermission);
+                console.log('當前權限狀態:', Notification.permission);
                 console.log('即將重生項目數量:', document.querySelectorAll('.upcoming-boss-item').length);
-                console.log('已通知的BOSS:', Array.from(notifiedBosses));
                 
-                // 手動觸發檢查
-                console.log('手動觸發BOSS檢查...');
-                checkUpcomingBosses();
-            }
-            debugNotifications();
+                // 列出所有即將重生的BOSS項目
+                const items = document.querySelectorAll('.upcoming-boss-item');
+                console.log('找到的BOSS項目:');
+                items.forEach((item, index) => {
+                    console.log(`${index + 1}. ${item.textContent}`);
+                });
+                
+                // 檢查通知相關函數是否存在
+                console.log('checkUpcomingBosses函數存在:', typeof checkUpcomingBosses !== 'undefined');
+                console.log('sendNotification函數存在:', typeof sendNotification !== 'undefined');
+                
+                // 嘗試手動觸發檢查
+                if (typeof checkUpcomingBosses !== 'undefined') {
+                    console.log('手動觸發BOSS檢查...');
+                    try {
+                        checkUpcomingBosses();
+                    } catch (error) {
+                        console.error('檢查BOSS時發生錯誤:', error);
+                    }
+                } else {
+                    console.warn('checkUpcomingBosses函數未定義');
+                }
+                
+                alert('Debug資訊已輸出到控制台！\\n請按F12開啟開發者工具查看Console日誌。');
+            })();
             </script>
             """
             st.markdown(debug_js, unsafe_allow_html=True)
