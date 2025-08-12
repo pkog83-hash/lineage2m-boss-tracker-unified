@@ -1,0 +1,246 @@
+{
+  "佩爾利斯": {
+    "respawn_minutes": 120,
+    "last_killed": "2025-08-12T12:19:00+08:00"
+  },
+  "巴實那": {
+    "respawn_minutes": 150,
+    "last_killed": null
+  },
+  "采爾圖巴": {
+    "respawn_minutes": 180,
+    "last_killed": "2025-08-12T11:19:00+08:00"
+  },
+  "潘納洛德": {
+    "respawn_minutes": 180,
+    "last_killed": null
+  },
+  "安庫拉": {
+    "respawn_minutes": 210,
+    "last_killed": null
+  },
+  "坦佛斯特": {
+    "respawn_minutes": 210,
+    "last_killed": null
+  },
+  "史坦": {
+    "respawn_minutes": 240,
+    "last_killed": null
+  },
+  "布賴卡": {
+    "respawn_minutes": 240,
+    "last_killed": null
+  },
+  "魔圖拉": {
+    "respawn_minutes": 240,
+    "last_killed": null
+  },
+  "特倫巴": {
+    "respawn_minutes": 270,
+    "last_killed": null
+  },
+  "提米特利斯": {
+    "respawn_minutes": 300,
+    "last_killed": null
+  },
+  "塔金": {
+    "respawn_minutes": 300,
+    "last_killed": null
+  },
+  "雷比魯": {
+    "respawn_minutes": 300,
+    "last_killed": null
+  },
+  "凱索思": {
+    "respawn_minutes": 360,
+    "last_killed": null
+  },
+  "巨蟻女王": {
+    "respawn_minutes": 360,
+    "last_killed": null
+  },
+  "卡雷斯": {
+    "respawn_minutes": 360,
+    "last_killed": null
+  },
+  "貝希莫斯": {
+    "respawn_minutes": 360,
+    "last_killed": null
+  },
+  "希瑟雷蒙": {
+    "respawn_minutes": 360,
+    "last_killed": null
+  },
+  "塔拉金": {
+    "respawn_minutes": 420,
+    "last_killed": null
+  },
+  "沙勒卡": {
+    "respawn_minutes": 420,
+    "last_killed": null
+  },
+  "梅杜莎": {
+    "respawn_minutes": 420,
+    "last_killed": null
+  },
+  "賽魯": {
+    "respawn_minutes": 450,
+    "last_killed": null
+  },
+  "潘柴特": {
+    "respawn_minutes": 480,
+    "last_killed": null
+  },
+  "突變克魯瑪": {
+    "respawn_minutes": 480,
+    "last_killed": null
+  },
+  "被汙染的克魯瑪": {
+    "respawn_minutes": 480,
+    "last_killed": null
+  },
+  "卡坦": {
+    "respawn_minutes": 480,
+    "last_killed": null
+  },
+  "提米妮爾": {
+    "respawn_minutes": 480,
+    "last_killed": null
+  },
+  "瓦柏": {
+    "respawn_minutes": 480,
+    "last_killed": null
+  },
+  "克拉奇": {
+    "respawn_minutes": 480,
+    "last_killed": null
+  },
+  "弗林特": {
+    "respawn_minutes": 480,
+    "last_killed": null
+  },
+  "蘭多勒": {
+    "respawn_minutes": 480,
+    "last_killed": null
+  },
+  "費德": {
+    "respawn_minutes": 540,
+    "last_killed": null
+  },
+  "寇倫": {
+    "respawn_minutes": 600,
+    "last_killed": null
+  },
+  "瑪杜克": {
+    "respawn_minutes": 600,
+    "last_killed": null
+  },
+  "薩班": {
+    "respawn_minutes": 720,
+    "last_killed": null
+  },
+  "核心基座": {
+    "respawn_minutes": 720,
+    "last_killed": null
+  },
+  "猛龍獸": {
+    "respawn_minutes": 720,
+    "last_killed": null
+  },
+  "黑色蕾爾莉": {
+    "respawn_minutes": 720,
+    "last_killed": null
+  },
+  "司穆艾爾": {
+    "respawn_minutes": 720,
+    "last_killed": null
+  },
+  "卡布里歐": {
+    "respawn_minutes": 720,
+    "last_killed": null
+  },
+  "安德拉斯": {
+    "respawn_minutes": 720,
+    "last_killed": null
+  },
+  "忘卻之鏡": {
+    "respawn_minutes": 720,
+    "last_killed": null
+  },
+  "納伊阿斯": {
+    "respawn_minutes": 720,
+    "last_killed": null
+  },
+  "希拉": {
+    "respawn_minutes": 720,
+    "last_killed": null
+  },
+  "姆夫": {
+    "respawn_minutes": 720,
+    "last_killed": null
+  },
+  "諾勒姆斯": {
+    "respawn_minutes": 1080,
+    "last_killed": null
+  },
+  "烏坎巴": {
+    "respawn_minutes": 1080,
+    "last_killed": null
+  },
+  "伊波斯": {
+    "respawn_minutes": 1080,
+    "last_killed": null
+  },
+  "凱都都": {
+    "respawn_minutes": 1080,
+    "last_killed": null
+  },
+  "伊格尼思": {
+    "respawn_minutes": 1080,
+    "last_killed": null
+  },
+  "奧爾芬": {
+    "respawn_minutes": 1440,
+    "last_killed": null
+  },
+  "哈普": {
+    "respawn_minutes": 1440,
+    "last_killed": null
+  },
+  "歐克斯": {
+    "respawn_minutes": 1440,
+    "last_killed": null
+  },
+  "塔那透斯": {
+    "respawn_minutes": 1440,
+    "last_killed": null
+  },
+  "鳳凰": {
+    "respawn_minutes": 1440,
+    "last_killed": null
+  },
+  "摩德烏斯": {
+    "respawn_minutes": 1440,
+    "last_killed": null
+  },
+  "霸拉克": {
+    "respawn_minutes": 1440,
+    "last_killed": null
+  },
+  "薩拉克斯": {
+    "respawn_minutes": 1440,
+    "last_killed": null
+  },
+  "巴倫": {
+    "respawn_minutes": 1440,
+    "last_killed": null
+  },
+  "黑卡頓": {
+    "respawn_minutes": 1440,
+    "last_killed": null
+  },
+  "拉何": {
+    "respawn_minutes": 1980,
+    "last_killed": null
+  }
+}
